@@ -6,9 +6,9 @@ export function Stock() {
     console.log(stock.stock.products)
     return (
     <div>
-        <form action="" method='' className='text-center'>
+        <form action="" method='' className='text-center' onSubmit={stock.handlesubmitstock}>
             <label htmlFor="" className='fw-bold'>Product: </label>
-            <select className='m-1' name="category" id="">
+            <select className='m-1' name="product" id="">
                 {
                     stock.stock.products?
                     stock.stock.products.map((stk)=>(
@@ -18,7 +18,7 @@ export function Stock() {
                 
             </select><br />
             <label htmlFor="" className='fw-bold'>Supplier: </label>
-            <select className='m-1' name="category" id="">
+            <select className='m-1' name="supplier" id="">
             {
                     stock.stock.suppliers?
                     stock.stock.suppliers.map((stk)=>(
@@ -27,16 +27,16 @@ export function Stock() {
                 }
             </select><br />
             <label htmlFor="" className='fw-bold'>Purchase Price: </label>
-            <input className='m-1' type="number" name="category" id="" /><br />
+            <input className='m-1' type="number" name="purchaseprice" id="" /><br />
 
             <label htmlFor="" className='fw-bold'>Sale Price: </label>
-            <input className='m-1' type="number" name="category" id="" /><br />
+            <input className='m-1' type="number" name="saleprice" id="" /><br />
 
             <label htmlFor="" className='fw-bold'>Quantity: </label>
-            <input className='m-1' type="number" name="category" id="" /><br />
+            <input className='m-1' type="number" name="quantity" id="" /><br />
 
             <label htmlFor="" className='fw-bold'>Expire Date: </label>
-            <input className='m-1' type="date" name="category" id="" /><br />
+            <input className='m-1' type="date" name="expiredate" id="" /><br />
             <button className='btn btn-info'>Add Stock</button>
         </form>
 
