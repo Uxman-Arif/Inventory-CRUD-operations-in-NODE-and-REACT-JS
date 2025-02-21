@@ -10,7 +10,10 @@ export function Contextprovider(props) {
     const [stock, setstock] = useState([]);
     useEffect(()=>{
         fetchstock().then((stk)=>{setstock(stk)});
-    })
+    });
+
+    
+
     return <stockcontext.Provider value={{stock}}>
         {props.children};
     </stockcontext.Provider>
